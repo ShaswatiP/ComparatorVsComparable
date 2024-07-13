@@ -38,7 +38,7 @@ public class CarComparable {
         morecars.add(new AnotherCar("Mercedres", "Petrol"));
         morecars.add(new AnotherCar("Ertiga", "CNG"));
 
-        // Here we can't write as Collection.sort(moreCars, new Comparable<>())
+        // Here we can't write as Collection.sort(moreCars, new Comparable<>()) -- as sort() takes comparator as argument - Collections.sort(List<T>,Comparator<>)
         Collections.sort(morecars);
 
         morecars.stream().forEach(anotherCar -> System.out.println(anotherCar.toString()));
